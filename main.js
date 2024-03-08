@@ -176,7 +176,7 @@ function checkIfWinner() {
   const p7 = board[2][0];
   const p8 = board[2][1];
   const p9 = board[2][2];
-  //
+  // este metodo original no funciono, cambio por PCwon and playerWon
   // const s1 = [p1, p2, p3];
   // const s2 = [p4, p5, p6];
   // const s3 = [p7, p8, p9];
@@ -230,29 +230,7 @@ function checkIfWinner() {
       }
     }
   }
-
   return draw ? "draw" : "none";
-
-  // if (res.length > 0) {
-  //   // hay un ganador
-  //   if (res[0] === "X") {
-  //     playerDiv.textContent = "PC WINS";
-  //     return "pcwon";
-  //   } else {
-  //     playerDiv.textContent = "USER WINS";
-  //     return "userwon";
-  //   }
-  // } else {
-  //   let draw = true;
-  //   for (let i = 0; i < arr.length; i++) {
-  //     for (let j = 0; j < arr.length; j++) {
-  //       if (board[i][j] === "") {
-  //         draw = false;
-  //       }
-  //     }
-  //   }
-  // }
-  // return draw ? "draw" : "none";
 }
 
 function renderCurrentPlayer() {
